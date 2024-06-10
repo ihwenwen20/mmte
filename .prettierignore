@@ -1,0 +1,11 @@
+eslintrc.json
+prettierrc.json
+package.json
+package-lock.json
+pnpm-lock.yaml
+tsconfig.json
+next.config.js
+next.config.mjs
+# tailwind.config.js
+# tailwind.config.ts
+jest.config.mjs

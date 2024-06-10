@@ -1,3 +1,53 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"plugins": [
+		"@typescript-eslint",
+		"prettier"
+	],
+	"ignorePatterns": [
+		"**/build/*",
+		"**/node_modules/*",
+		"**/public/*"
+		// "**/next/*"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"arrowParens": "always",
+				"printWidth": 60,
+				"semi": false,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"tabWidth": 2,
+				"bracketSpacing": true,
+				"endOfLine": "auto",
+				"jsxSingleQuote": true,
+				"jsxBracketSameLine": true,
+				"object-curly-spacing": "always",
+				"no-multi-spaces": [
+					"error",
+					{
+						"ignoreEOLComments": false,
+						"exceptions": {
+							"ImportDeclaration": true,
+							"VariableDeclarator": true
+						}
+					}
+				]
+			}
+		],
+		"@typescript-eslint/ban-types": "warn",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"@typescript-eslint/no-explicit-any": "warn",
+		"react-hooks/rules-of-hooks": "warn",
+		"@next/next/no-img-element": "warn",
+		"react/no-unescaped-entities": "warn",
+		"@next/next/no-page-custom-font": "warn",
+		"prefer-const": "warn"
+	}
 }
